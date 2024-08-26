@@ -1,0 +1,26 @@
+.fruits-display>div{
+    border: 1px solid rgb(0, 116, 10);
+    border-radius: 10px;
+    height: 280px;
+    width: 270px;
+    margin: 25px;
+    margin-top: 145;
+    flex-direction: row;
+    box-shadow: 0px 1px 2px 1px rgb(202, 202, 202) ;
+}
+
+.fruits-display{
+    display: flex;
+}
+
+header{
+
+    position: absolute;
+    background-color: green;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
