@@ -2,10 +2,11 @@ let product =
     {
         "name": String,
         "imgUrl": String,
-        "description": String
+        "description": String,
+        "price": Number
     }
   
-    function createProduct(name, imgUrl, description)
+    function createProduct(name, imgUrl, description,price)
     {
         //^1. Assign desired values as parameters 
         //^2. Parameters become now the value of each property of the object "product"
@@ -13,12 +14,11 @@ let product =
 
             name,
             imgUrl,
-            description
+            description,
+            price
 
         }
     }
-
-
 
 let productBasket = [createProduct("Apricot",`https://cdn.britannica.com/36/160636-050-B1DC5C0A/Laetrile-apricot-pits.jpg`,
     `Similar in shape to a peach, the product is nearly smooth, 
@@ -37,34 +37,6 @@ let productBasket = [createProduct("Apricot",`https://cdn.britannica.com/36/1606
     )];
 
 
-function createCard(product)
-{
-    const newDiv = document.createElement("div");
-    const imageContainerDiv = document.createElement("div");
-    const textContainerDiv = document.createElement("div");
-
-    const mainDiv = document.getElementById("main-div");
-    mainDiv.appendChild(newDiv);
-    newDiv.appendChild(imageContainerDiv);
-    newDiv.appendChild(textContainerDiv);
- 
-    imageContainerDiv.className = "image-container";
-    textContainerDiv.className = "text-container";
-
-    const productImgElement = document.createElement("img");
-    productImgElement.src = product.imgUrl;
-    productImgElement.setAttribute("width","100%");
-    productImgElement.setAttribute("height","100%")
-    imageContainerDiv.appendChild(productImgElement);
-
-    const paragraphElement = document.createElement("p");
-    paragraphElement.innerText = product.name;
-    textContainerDiv.appendChild(paragraphElement); 
-
-    const paragraphElement2 = document.createElement("p");
-    paragraphElement2.innerText = product.description;
-    textContainerDiv.appendChild(paragraphElement2);
-}
 
 for(let product of productBasket)
     {
