@@ -37,14 +37,6 @@ let productBasket = [createProduct("Apricot",`https://cdn.britannica.com/36/1606
     )];
 
 
-function showStatusOfproduct()
-{
-    // 1. Get the object in product basket.
-    // 2. Alert its stats when the user clicks on the corresponding div.
-    
-
-}
-
 function createCard(product)
 {
     const newDiv = document.createElement("div");
