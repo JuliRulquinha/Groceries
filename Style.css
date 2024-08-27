@@ -1,5 +1,6 @@
 .fruits-display>div{
     border: 1px solid rgb(0, 116, 10);
+    background-color: rgb(235, 243, 236);
     border-radius: 10px;
     height: 580px;
     width: 270px;
@@ -26,23 +27,21 @@ header{
 }
 
 .image-container{
-    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0 0 2px 2px rgb(154, 165, 154);
     margin-top: 10px ;
     margin-left: 7px;
     margin-right: 5px;
-    margin-bottom: 6px;
-    height: 253px;
-    width: 253px;
-    border-radius: 10px;
-    border-image: auto;
+    margin-bottom: 20px;
+    height: 250px;
+    width: 250px;
+
 }
 
 .text-container{
     border: 1px solid rgb(0, 0, 0);
     margin-left: 7px;
     margin-right: 5px;
-    margin-bottom: 5px;
-    border-radius: 10px;
+    margin-bottom: 5px;   
     height: 130px;
     width: 253px;
     overflow-y: scroll;
@@ -65,7 +64,6 @@ header{
     background-color: green;
     margin: 0 5px 5px 5px;
     height: 50px;
-    border-radius: 10px;
     text-align: right;
     color: white;
     font-size: 30px;
