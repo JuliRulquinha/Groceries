@@ -24,3 +24,32 @@ header{
     right: 0;
 
 }
+
+
+#div1{
+    border: 1px solid rgb(0, 124, 10);
+}
+
+.image-container{
+    border: 1px solid rgb(0, 0, 0);
+    margin-top: 10px ;
+    margin-left: 7px;
+    margin-right: 5px;
+    margin-bottom: 6px;
+    height: 150px;
+    width: 253px;
+    border-radius: 10px;
+}
+
+.text-container{
+    border: 1px solid rgb(0, 0, 0);
+    margin-left: 7px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    height: 100px;
+    width: 253px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
