@@ -29,10 +29,10 @@ function createCard(product)
     productImgElement.setAttribute("height","100%")
     imageContainerDiv.appendChild(productImgElement);
 
-    
+
     nameContainerdiv.innerText = product.name;
     paragraphElement.innerText = product.description;
-    priceContainerDiv.innerText = product.price;
+    priceContainerDiv.innerText = "R$ "+product.price;
     textContainerDiv.appendChild(paragraphElement); 
     
 

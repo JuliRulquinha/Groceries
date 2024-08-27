@@ -25,16 +25,15 @@ let productBasket = [createProduct("Apricot",`https://cdn.britannica.com/36/1606
     round to oblong in some varieties, 
     and somewhat flattened but with little 
     to no hairiness when ripe. Its flesh is 
-    typically a rich yellow to yellowish orange.`), 
+    typically a rich yellow to yellowish orange.`, 23.99), 
     createProduct("Banana","https://static.libertyprim.com/files/familles/banane-large.jpg?1569271725",`Bananas are long, curved products with smooth skin 
     that are usually yellow, but can also be green, red, 
     or purple depending on the variety. 
-    They are about 7 to 9 inches long and 2 to 3 inches in diameter.`), 
+    They are about 7 to 9 inches long and 2 to 3 inches in diameter.`, 7.99), 
     createProduct("Strawberry",`https://www.collinsdictionary.com/images/full/strawberry_227472010.jpg`
     ,`Strawberries are soft, sweet, and juicy red berries that grow on low-flowering plants. 
     They have tiny edible seeds that cover their surface and are 
-    the enlarged ends of the plant's stamen.`
-    )];
+    the enlarged ends of the plant's stamen.`,17.99)];
 
 
 
