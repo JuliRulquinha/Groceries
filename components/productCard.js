@@ -9,12 +9,14 @@ function createCard(product)
     const paragraphElement = document.createElement("p");
     const productImgElement = document.createElement("img");
     const priceContainerDiv = document.createElement("div");
+    const ratingContainerDiv = document.createElement("div");
 
     mainDiv.appendChild(cardDiv);
     cardDiv.appendChild(nameContainerdiv);
     cardDiv.appendChild(imageContainerDiv);
     cardDiv.appendChild(textContainerDiv);
     cardDiv.appendChild(priceContainerDiv);
+    cardDiv.appendChild(ratingContainerDiv);
     
     
     cardDiv.className = "card-div";
@@ -22,11 +24,13 @@ function createCard(product)
     textContainerDiv.className = "text-container";
     nameContainerdiv.className = "name-container";
     priceContainerDiv.className = "price-container";
+    ratingContainerDiv.className = "rating-container";
+
 
     
     productImgElement.src = product.imgUrl;
     productImgElement.setAttribute("width","100%");
-    productImgElement.setAttribute("height","100%")
+    productImgElement.setAttribute("height","100%");
     imageContainerDiv.appendChild(productImgElement);
 
 
