@@ -18,9 +18,9 @@ function createCard(product)
     cardDiv.appendChild(imageContainerDiv);
     cardDiv.appendChild(textContainerDiv);
     cardDiv.appendChild(priceContainerDiv);
-    cardDiv.appendChild(ratingContainerDiv);
     cardDiv.appendChild(quantityContainerDiv);
     cardDiv.appendChild(isAvailableContainerDiv);
+    cardDiv.appendChild(ratingContainerDiv);
     
     
     cardDiv.className = "card-div";
@@ -45,6 +45,7 @@ function createCard(product)
     priceContainerDiv.innerText = "R$ "+product.price;
     textContainerDiv.appendChild(paragraphElement); 
     isAvailableContainerDiv = product.isAvailable;
+    ratingContainerDiv.innerText = "☆ ☆ ☆ ☆ ☆";
     
     if(product.quantity > 0)
     {
@@ -57,8 +58,6 @@ function createCard(product)
         product.isAvailable = false;
         quantityContainerDiv.innerText = "This product is not available at the moment";
     }
-    
-
-   
+       
 }
 
