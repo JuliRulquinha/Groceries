@@ -1,3 +1,12 @@
+
+.order-button{
+    border: 1px solid black;
+    height: 30px;
+    width: 80px;
+    position: fixed;
+    margin: 100px 20px 20px 10px;
+}
+
 .fruits-display>div{
     border: 1px solid rgb(0, 116, 10);
     background-color: rgb(235, 243, 236);
@@ -23,7 +32,9 @@ header{
     top: 0;
     left: 0;
     right: 0;
-
+    color: white;
+    font-size: 41;
+    
 }
 
 .image-container{
@@ -88,4 +99,20 @@ header{
     font-size: 30;
     text-align: center;
     
+}
+
+#select-display-order{
+    height: 30px;
+    width: 150px;
+    top: 110px;
+    left: 32px;
+    position: fixed;
+    
+}
+
+select{
+    font-weight: bolder;
+    color: rgb(145, 139, 139);
+    font-size: 14px;
+    padding-left: 8px;
 }

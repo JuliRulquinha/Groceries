@@ -4,11 +4,25 @@
     </head>
     <body>
         <header>
-
+            Grocery online shopping
         </header>
+        <select id="select-display-order" onclick="reorder(event)">
+            <option value="select-order" selected>
+                select order
+            </option>
+
+            <option value="highest price">
+                highest price
+            </option>
+
+            <option value="lowest price">
+                lowest price
+            </option>
+        </select>
         <div class="fruits-display debug-mode"  id="main-div" >
 
-          
+           
+            
         </div>
         <script src="components/productCard.js"></script>
         <script src="Index.js"></script>

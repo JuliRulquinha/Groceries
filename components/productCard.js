@@ -67,3 +67,7 @@ function createCard(product)
        
 }
 
+function reorder(event)
+{
+    console.log(event.target.value);
+}
