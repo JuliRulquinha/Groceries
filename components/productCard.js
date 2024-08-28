@@ -12,6 +12,7 @@ function createCard(product)
     const ratingContainerDiv = document.createElement("div");
     const quantityContainerDiv = document.createElement("div");
     let isAvailableContainerDiv = document.createElement("div");
+    const anchorPageRedirect = document.createElement("a");
 
     mainDiv.appendChild(cardDiv);
     cardDiv.appendChild(nameContainerdiv);
@@ -31,6 +32,7 @@ function createCard(product)
     ratingContainerDiv.className = "rating-container";
     quantityContainerDiv.className = "quantity-container";
     isAvailableContainerDiv.className = "availability-check";
+    anchorPageRedirect.className = "product-anchor";
 
 
     
@@ -38,6 +40,9 @@ function createCard(product)
     productImgElement.setAttribute("width","100%");
     productImgElement.setAttribute("height","100%");
     imageContainerDiv.appendChild(productImgElement);
+    anchorPageRedirect.href = "http://127.0.0.1:3000/product.html";
+    anchorPageRedirect.appendChild(productImgElement);
+    imageContainerDiv.appendChild(anchorPageRedirect);
 
 
     nameContainerdiv.innerText = product.name;
@@ -46,6 +51,7 @@ function createCard(product)
     textContainerDiv.appendChild(paragraphElement); 
     isAvailableContainerDiv = product.isAvailable;
     ratingContainerDiv.innerText = "☆ ☆ ☆ ☆ ☆";
+    
     
     if(product.quantity > 0)
     {
