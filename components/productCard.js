@@ -61,7 +61,7 @@ function createCard(product)
     priceContainerDiv.innerText = "R$ "+product.price;
     textContainerDiv.appendChild(paragraphElement); 
     isAvailableContainerDiv = product.isAvailable;
-    ratingContainerDiv.innerText = "☆ ☆ ☆ ☆ ☆";
+    ratingContainerDiv.innerText = "★ ★ ★ ★ ★";
     
     /*"If" statement declared to test if the variable "isAvailable" is true based 
     on the quantity of products in stock */
@@ -70,6 +70,7 @@ function createCard(product)
     {
         product.isAvailable = true;
         quantityContainerDiv.innerText = product.quantity+" in stock";
+
     }
     else
     {
@@ -79,7 +80,3 @@ function createCard(product)
        
 }
 
-function reorder(event)
-{
-    console.log(event.target.value);
-}

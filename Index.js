@@ -39,11 +39,49 @@ let productBasket = [createProduct("Apricot",`https://cdn.britannica.com/36/1606
     They have tiny edible seeds that cover their surface and are 
     the enlarged ends of the plant's stamen.`,10.99, 1000, true)];
 
-
+    productBasket.sort( (a,b) => b.price - a.price);
 
 for(let product of productBasket)
 {
     createCard(product);
 }
 
+function reorder(event)
+{
+    console.log(event.target.value);
 
+    switch(event.target.value)
+    {
+        case "highest price":
+            productBasket.sort( (a,b) => b.price - a.price);
+        break;
+
+        case "lowest price":
+            productBasket.sort( (a,b) => a.price - b.price);
+        break;
+
+        case "name":
+            productBasket.sort((a,b) => 
+                {
+                    if(a.name > b.name)
+                        return 1;
+                    else if(a.name < b.name)
+                        return -1;
+                });
+        break;
+    }
+    
+    clearAll();
+
+    for(let product of productBasket)
+    {
+        createCard(product);
+    }
+        
+}
+
+function clearAll()
+{
+    let mainDiv = document.getElementById("main-div");
+    mainDiv.innerHTML = "";
+}
