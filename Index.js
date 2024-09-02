@@ -88,5 +88,11 @@ function clearAll()
 
 function addProduct()
 {
-    
+    const name = document.getElementById(p-name).innerText;
+    const imgUrl = document.getElementById(p-img).innerText;
+    const description = document.getElementById(p-description).innerText;
+    const price = document.getElementById(p-price).innerText;
+    const quantity = document.getElementById(p-quantity).innerText;
+
+    createProduct(name, imgUrl, description, price, quantity, true);
 }
