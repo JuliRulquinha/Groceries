@@ -97,6 +97,6 @@ function addProduct()
     let newProduct = createProduct(name, imgUrl, description, price, quantity, true);
 
     createCard(newProduct);
-
+    productBasket.push(newProduct);
     
 }
