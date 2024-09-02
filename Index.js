@@ -88,11 +88,15 @@ function clearAll()
 
 function addProduct()
 {
-    const name = document.getElementById(p-name).innerText;
-    const imgUrl = document.getElementById(p-img).innerText;
-    const description = document.getElementById(p-description).innerText;
-    const price = document.getElementById(p-price).innerText;
-    const quantity = document.getElementById(p-quantity).innerText;
+    const name = document.getElementById("p-name").value;
+    const imgUrl = document.getElementById("p-img").value;
+    const description = document.getElementById("p-description").value;
+    const price = document.getElementById("p-price").value;
+    const quantity = document.getElementById("p-quantity").value;
 
-    createProduct(name, imgUrl, description, price, quantity, true);
+    let newProduct = createProduct(name, imgUrl, description, price, quantity, true);
+
+    createCard(newProduct);
+
+    
 }
