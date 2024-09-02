@@ -10,12 +10,15 @@ let product =
     "isAvailable": true
 }
   
+let idGenerator = 0;
+
 function createProduct(name, imgUrl, description,price, quantity,isAvailable)
 {
     //^1. Assign desired values as parameters 
     //^2. Parameters become now the value of each property of the object "product"
+    const _id = idGenerator++;
     return {
-
+        id: _id,
         name,
         imgUrl,
         description,
@@ -118,4 +121,9 @@ function clearForm()
 {
    
     form.reset();
+}
+
+function createProductPage()
+{
+    
 }

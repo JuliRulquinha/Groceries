@@ -170,4 +170,13 @@ footer{
         height: 620px;    
         margin: 25px;    
     }
+
+    header{
+        height: 80px;
+    }
+
+    #select-order{
+        top: 200px;
+        left: 25px;
+    }
 }
