@@ -7,6 +7,10 @@
     margin: 100px 20px 20px 10px;
 }
 
+.fruits-display{
+    display: flex;
+}
+
 .fruits-display>div{
     border: 1px solid rgb(0, 116, 10);
     background-color: rgb(235, 243, 236);
@@ -19,9 +23,7 @@
     box-shadow: 0px 1px 2px 1px rgb(202, 202, 202) ;
 }
 
-.fruits-display{
-    display: flex;
-}
+
 
 header{
 
@@ -151,4 +153,27 @@ footer{
 
 .input-information{
     border: 1px solid green;
+}
+
+@media screen and (max-width:600px) and (orientation:portrait){
+
+    body{
+        background-color: blue;
+        
+    }
+
+    .fruits-display{
+        display: block;
+    }
+    .fruits-display>div{
+        border: 1px solid rgb(0, 116, 10);
+        background-color: rgb(235, 243, 236);
+        border-radius: 10px;
+        height: 620px;
+        width: 270px;
+        margin: 25px;
+        margin-top: 145;
+        flex-direction: column;
+        box-shadow: 0px 1px 2px 1px rgb(202, 202, 202) ;
+    }
 }
