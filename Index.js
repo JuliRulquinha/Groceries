@@ -85,3 +85,8 @@ function clearAll()
     let mainDiv = document.getElementById("main-div");
     mainDiv.innerHTML = "";
 }
+
+function addProduct()
+{
+    
+}
