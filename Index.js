@@ -1,3 +1,5 @@
+
+
 let product = 
 {
     "name": String,
@@ -99,4 +101,21 @@ function addProduct()
     createCard(newProduct);
     productBasket.push(newProduct);
     
+}
+
+let form = document.getElementById("product-form");
+
+form.addEventListener('submit', function(event) {
+    // Prevent the default form submission
+    event.preventDefault();
+
+    // Custom code to handle the form submission
+    console.log('Form submission prevented.');
+});
+
+
+function clearForm()
+{
+   
+    form.reset();
 }
