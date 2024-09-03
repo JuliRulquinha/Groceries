@@ -21,16 +21,28 @@ fetch("productBasket.json")
 .then(productsReceived => {
     products = productsReceived;         
     // use the id property to obtain the corresponding object from products array
-    product = products.filter(p => p.id == idParam);   
+    product = products.filter(p => p.id == idParam)[0];   
     
     
     console.log(product[0]);
     //" draw "  the product on the screen
 
     let imgEL = document.getElementById("p-img");
-    imgEL.src = product[0].imgUrl;
+    imgEL.src = product.imgUrl;
     console.log(imgEL);
     
+    let nameEL = document.getElementById("p-name");
+    nameEL.innerText = product.name;
+    
+
+    let infoEL = document.getElementById("p-description");
+    infoEL.innerText = product.description;
+
+    let priceEL = document.getElementById("p-price");
+    priceEL.innerText = "R$: "+product.price;
+
+    let quantityEL = document.getElementById("p-quantity");
+    quantityEL.innerText = product.quantity+" in stock";
 });
 
 
