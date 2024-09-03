@@ -104,3 +104,23 @@ footer{
     padding: 8px;
     width: 90px;
 }
+
+#add-to-cart{
+    background-color: green;
+    color: white;
+    font-weight: bolder;
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
+    margin: 25px;
+}
+
+#buy{
+    background-color: rgb(255, 255, 255);
+    color: green;
+    font-weight: bolder;
+    width: 150px;
+    height: 30px;
+    font-size: 15px;
+    
+}
