@@ -26,6 +26,10 @@ fetch("productBasket.json")
     
     console.log(product[0]);
     //" draw "  the product on the screen
+
+    let imgEL = document.getElementById("p-img");
+    imgEL.src = product[0].imgUrl;
+    console.log(imgEL);
     
 });
 

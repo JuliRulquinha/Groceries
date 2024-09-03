@@ -66,3 +66,15 @@ footer{
     display: flex;
     flex-direction: row;
 }
+
+#image-div{
+    border: 1px solid black;
+    margin: 25px;
+    height: 280px;
+    
+}
+
+#p-img{
+    height: 280px;
+    width: 310px;
+}
