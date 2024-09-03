@@ -31,15 +31,15 @@ function reorder(event)
     switch(event.target.value)
     {
         case "highest price":
-            productBasket.sort( (a,b) => b.price - a.price);
+            products.sort( (a,b) => b.price - a.price);
         break;
 
         case "lowest price":
-            productBasket.sort( (a,b) => a.price - b.price);
+            products.sort( (a,b) => a.price - b.price);
         break;
 
         case "name":
-            productBasket.sort((a,b) => 
+            products.sort((a,b) => 
                 {
                     if(a.name > b.name)
                         return 1;
@@ -51,7 +51,7 @@ function reorder(event)
     
     clearAll();
 
-    for(let product of productBasket)
+    for(let product of products)
     {
         createCard(product);
     }
