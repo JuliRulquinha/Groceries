@@ -100,3 +100,5 @@ function createProductPage()
 {
 
 }
+
+setTimeout(() => {confirm("Are you still here?")},10000);

@@ -21,7 +21,7 @@ fetch("productBasket.json")
 .then(productsReceived => {
     products = productsReceived;         
     // use the id property to obtain the corresponding object from products array
-    product = products.filter(p => p.id == idParam)[0];   
+    product = products.find(p => p.id == idParam);   
     
     
     console.log(product[0]);
@@ -45,8 +45,28 @@ fetch("productBasket.json")
     quantityEL.innerText = product.quantity+" in stock";
 });
 
+function increaseQuantity()
+{
+    let numberEl = document.getElementById("number");
+    let number = Number(numberEl.innerText);
+    number++;
+    numberEl.innerText = number; 
+    
+}
 
+function decreaseQuantity()
+{
+    let numberEl = document.getElementById("number");
+    let number = Number(numberEl.innerText);
 
+    if(number <= 1)
+    {   
+        return;
+    }
+
+    number--;
+    numberEl.innerText = number; 
+}
 
 
 

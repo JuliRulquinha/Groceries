@@ -124,3 +124,42 @@ footer{
     font-size: 15px;
     
 }
+
+.quantity-buttons{
+    color: green;
+    font-weight: bolder;
+    font-size: 20px;
+    height: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: row; 
+    margin: 25px 0 10px 25px ;
+}
+
+#increase-1{
+    margin-right: 10px ;
+    border: 0cap;
+    background-color: rgb(100, 241, 100);
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    color: green;
+    border-radius: 250px;
+
+}
+
+#decrease-1{
+    margin-right: 10px ;
+    border: 0cap;
+    background-color: rgb(100, 241, 100);
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    color: green;
+    border-radius: 20px;
+}
+
+#number{
+    margin: 5px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
