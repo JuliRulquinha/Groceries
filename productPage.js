@@ -49,8 +49,20 @@ function increaseQuantity()
 {
     let numberEl = document.getElementById("number");
     let number = Number(numberEl.innerText);
+
+
+
+    if(number >= product.quantity)
+    {
+        return;
+    }
+
     number++;
     numberEl.innerText = number; 
+
+   
+
+    
     
 }
 
