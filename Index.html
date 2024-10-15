@@ -1,92 +1,90 @@
 <html>
-    
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="Style.css">
-    </head>
-    <body>
-        <a href="#">
-            <header>
-               
-        
-               
-                Grocery online shopping 
-            </header> 
-       </a>
-        <select id="select-display-order" onclick="reorder(event)">
-            <option value="select-order" selected style="color: grey;">
-                order by
-            </option>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <option value="highest price" style="color: black;">
-                highest price
-            </option>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
 
-            <option value="lowest price" style="color: black;">
-                lowest price
-            </option>
-
-            <option value="name" style="color: black;">
-                name
-            </option>
-
-            
-        </select>
-
-
-
-        <main>
-        <div class="fruits-display debug-mode"  id="main-div" >
-
-        </div>
-
-        <div id="create-product" class="create-product">
-            <form id="product-form">
-            Create product
-
-            <p>product name</p>
-            <input class="input-information" 
-                      id="p-name" 
-                    type="text" 
-               minlength="2" 
-               maxlength="10" 
-             placeholder="type name">
-
-            <p>image url</p>
-            <input class="input-information" 
-                      id="p-img" 
-             placeholder="image url">
-
-            <p>description</p>
-            <input class="input-information" 
-                      id="p-description" 
-             placeholder="type description">
-
-            <p>price</p>
-            <input class="input-information" 
-                      id="p-price"
-             placeholder="inform price">
+<body>
+    <a href="#">
+        <header class="header">
+            <div id="header-div">
+                <div id="title-div" class="header-div">
+                    Grocery online shopping
+                </div>  
+                <div id="header-img-div" class="header-div">
                 
-
-            <p>quantity</p>
-            <input class="input-information" 
-                      id="p-quantity" 
-                    type="number" 
-                     min="1"
-             placeholder="inform quantity"
-                    >
+                </div>
+                <i class="fa-solid fa-cart-shopping my-class" onclick="showCartContent()"></i>
+                
+            </div>
+           
             
+            
+        </header>
+    </a>
+    <select id="select-display-order" onclick="reorder(event)">
+        <option value="select-order" selected style="color: grey;">
+            order by
+        </option>
 
-            <button id="add-button" onclick="addProduct()">add</button>
-            <button id="clear-all" onclick="clearForm()">clear</button>
-        </form>
+        <option value="highest price" style="color: black;">
+            highest price
+        </option>
+
+        <option value="lowest price" style="color: black;">
+            lowest price
+        </option>
+
+        <option value="name" style="color: black;">
+            name
+        </option>
+
+
+    </select>
+
+
+
+    <main>
+        <div class="fruits-display debug-mode" id="main-div">
+            
         </div>
+        <div id="cart-div" class="cart-div" hidden>dfg</div>
+        </div>
+        <div id="create-product" class="create-product">
+           <form id="product-form">
+                Add product
+
+                <p>product name</p>
+                <input class="input-information" id="p-name" type="text" minlength="2" maxlength="10"
+                    placeholder="type name">
+
+                <p>image url</p>
+                <input class="input-information" id="p-img" placeholder="image url">
+
+                <p>description</p>
+                <input class="input-information" id="p-description" placeholder="type description">
+
+                <p>price</p>
+                <input class="input-information" id="p-price" placeholder="inform price">
+
+
+                <p>quantity</p>
+                <input class="input-information" id="p-quantity" type="number" min="1" placeholder="inform quantity">
+
+                
+                <button id="add-button" type="submit" onclick="addProduct()">add</button>
+                <button id="clear-all" onclick="clearForm()">clear</button>
+            </form>
+       
         <script src="components/productCard.js"></script>
-        <script src="Index.js"></script>        
+        <script src="Index.js"></script>
 
         <footer>
         </footer>
     </main>
-    </body>
+</body>
+
 </html>

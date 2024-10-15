@@ -11,7 +11,7 @@ let product =
 let idGenerator = 0;
 let products = [];
 
-fetch("productBasket.json")
+fetch("https://localhost:7226/Products/GetAllProducts")
 .then(response => response.json())
 .then(productsReceived => {
         products = productsReceived;
@@ -66,18 +66,37 @@ function clearAll()
 
 function addProduct()
 {
-    const name = document.getElementById("p-name").value;
-    const imgUrl = document.getElementById("p-img").value;
-    const description = document.getElementById("p-description").value;
-    const price = document.getElementById("p-price").value;
-    const quantity = document.getElementById("p-quantity").value;
-
-    let newProduct = createProduct(name, imgUrl, description, price, quantity, true);
-
-    createCard(newProduct);
-    productBasket.push(newProduct);
     
+    const Name = document.getElementById("p-name").value;
+    const ImgUrl = document.getElementById("p-img").value;
+    const Description = document.getElementById("p-description").value;
+    const Price = document.getElementById("p-price").value;
+    const Quantity = document.getElementById("p-quantity").value;
+
+    const body ={
+        Name,
+        ImgUrl,
+        Description,
+        Price,
+        Quantity
+    }
+    fetch("https://localhost:7226/Products/Products",{
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+
+        },
+        body:JSON.stringify(body)
+    }).then(response => response.json())
+    .then(data =>{
+            console.log(data);
+    })
+        
 }
+
+    
+    
+
 
 let form = document.getElementById("product-form");
 
@@ -100,5 +119,14 @@ function createProductPage()
 {
 
 }
-
-setTimeout(() => {confirm("Are you still here?")},10000);
+function showCartContent(){
+    let cartDiv = document.getElementById("cart-div");
+    
+    if(cartDiv.hasAttribute("hidden")){
+        cartDiv.removeAttribute("hidden");
+    }
+    else if(cartDiv.hasAttribute("hidden") == false)
+    {
+        cartDiv.setAttribute("hidden", true);
+    }
+}

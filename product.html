@@ -10,13 +10,19 @@
 </head>
 <body>
    <a href="https://julirulquinha.github.io/Groceries/Index.html">
-    <header>
+    <header class="header">
+        <div id="header-div">
+            <div id="title-div" class="header-div">
+                Grocery online shopping
+            </div>  
+            <div id="header-img-div" class="header-div">
+            
+            </div>
+        </div>
        
-
-       
-        Grocery online shopping
-        </header> 
-    </a>
+        
+        
+    </header></a>
     <div id="main-div" 
       class="product-display">
         dfsf
@@ -55,13 +61,41 @@
 
                 <button id="add-to-cart" class="btn">ADD TO CART</button>
                 <button id="buy" class="btn"> BUY NOW</button>
+                <button id="edit" class="btn" onclick="showOrHideProductEditor()">EDIT</button>
+                <button id="delete" class="btn" onclick="deleteProduct()">DELETE PRODUCT</button>
+
+                <div id="edit-form-div" class="create-product" hidden>
+                    <form id="edit-product" action="#">
+                        EDIT PRODUCT
+                        <p>product name</p>
+                        <input id="txt-name" class="input-information" type="text" minlength="2" maxlength="20"
+                            placeholder="type name">
+        
+                        <p>image url</p>
+                        <input id="img-url" class="input-information" placeholder="image url">
+        
+                        <p>description</p>
+                        <input id="description-txt" class="input-information" placeholder="type description">
+        
+                        <p>price</p>
+                        <input id="price" class="input-information" placeholder="inform price">
+        
+        
+                        <p>quantity</p>
+                        <input id="quantity" class="input-information" type="number" min="1" placeholder="inform quantity">
+
+                        <button id="add-button" type="submit" onclick="updateProductWithBody(event)">send</button>
+                        <button id="clear-all" onclick="clearForm()">clear</button>
+                    </form>
+                </div>
+                
             </div>
            
         </div>
        
     </div>
 
-    <script src="productPage.js">
+    <script src="productPage.js" src="product.js">
         
     </script>
 

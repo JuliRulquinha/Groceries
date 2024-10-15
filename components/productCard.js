@@ -45,7 +45,7 @@ function createCard(product)
     productImgElement.setAttribute("width","100%");
     productImgElement.setAttribute("height","100%");
     imageContainerDiv.appendChild(productImgElement);
-    anchorPageRedirect.href = `http://127.0.0.1:3000/product.html?id=${product.id}`;
+    anchorPageRedirect.href = `http://127.0.0.1:5500/product.html?id=${product.id}`;
     anchorPageRedirect.appendChild(productImgElement);
     imageContainerDiv.appendChild(anchorPageRedirect);
 
