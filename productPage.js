@@ -208,3 +208,4 @@ function showCartContent(){
         cartDiv.setAttribute("hidden", true);
     }
 }
+

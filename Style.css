@@ -136,15 +136,13 @@ aside{
     
 }
 
-footer{
+/* footer{
     background-color: rgb(206, 247, 206);
-    margin-left: -8px;
-    margin-bottom: -10px;
     padding: 16px 0 0 16px;
-    width: 100%;
+    width: 100%; 
     height: 150px;
-    margin-top: 250px;
-}
+    margin-top: 100px;
+} */
 
 .create-product{
     border: 1px solid rgb(0, 116, 10);
@@ -225,6 +223,31 @@ footer{
 
 .cart-div{
     height: 100%;
-    width: 200px;
-    border: 1px solid black;
+    width: 550px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    float: left;
+    background-color: white;
+    box-shadow: 0px 1px 5px 2px rgb(129, 129, 129);
+    font-size: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: rgb(105, 105, 105);
+}
+
+.text-holder{
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+#order-sum{
+    background-color: rgb(233, 233, 233);
+    width: 450px;
+    margin: 35px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 5px;
 }
