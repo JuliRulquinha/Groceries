@@ -53,12 +53,16 @@
         </div>
 
         <div id="cart-div" class="cart-div" hidden>
-           <p class="text-holder">SHOPPING CART ITEMS</p> 
-           
-           <div id="order-sum"><p class="text-holder">ORDER SUMMARY</p> </div>
+            <div id="cart-title-div">
+             <p class="text-holder">SHOPPING CART ITEMS</p>
+             <button class="close-btn" onclick="closeCartTab()"> X</button>
+         </div>  
+             
+             
+             <div id="order-sum"><p class="text-holder">ORDER SUMMARY</p> </div>
+          </div>
         </div>
 
-        </div>
         <div id="create-product" class="create-product">
            <form id="product-form">
                 Add product
@@ -87,7 +91,9 @@
        
         <script src="components/productCard.js"></script>
         <script src="Index.js"></script>
+        
 
+        
         <!-- <footer>
         </footer> -->
     </main>

@@ -221,6 +221,8 @@ aside{
 
 }
 
+
+
 .cart-div{
     height: 100%;
     width: 550px;
@@ -236,11 +238,12 @@ aside{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     color: rgb(105, 105, 105);
+    
 }
 
 .text-holder{
     padding-bottom: 10px;
-    border-bottom: 1px solid rgb(214, 214, 214);
+    border-bottom: 1px solid grey;
 }
 
 #order-sum{
@@ -250,4 +253,11 @@ aside{
     height: 300px;
     padding: 20px;
     border-radius: 5px;
+}
+
+.close-btn{
+    color: white;
+    border:unset;
+    width: 23px;
+    background-color: grey;
 }

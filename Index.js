@@ -130,3 +130,13 @@ function showCartContent(){
         cartDiv.setAttribute("hidden", true);
     }
 }
+
+function closeCartTab(){
+
+    let cartDiv = document.getElementById("cart-div");
+    
+    if(cartDiv.hasAttribute("hidden") == false)
+    {
+        cartDiv.setAttribute("hidden", "");
+    }
+}

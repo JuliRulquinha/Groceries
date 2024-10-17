@@ -228,3 +228,65 @@ footer{
  #title-div{
      padding-top: 20px;
  }
+
+ .my-class{
+    margin-top: 30px;
+    margin-left: 300px;
+
+}
+
+
+
+.cart-div{
+    height: 100%;
+    width: 550px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    float: left;
+    background-color: white;
+    box-shadow: 0px 1px 5px 2px rgb(129, 129, 129);
+    font-size: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    color: rgb(105, 105, 105);
+    
+}
+
+.text-holder{
+    padding-bottom: 10px;
+    margin-left: 145px;
+}
+.text-holder-order{
+    padding-bottom: 10px;
+    border-bottom: 1px solid grey;
+}
+
+#order-sum{
+    background-color: rgb(233, 233, 233);
+    width: 450px;
+    margin: 35px;
+    height: 300px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.close-btn{
+    color: white;
+    border:unset;
+    width: 23px;  
+    height: 23px;
+    background-color: rgb(170, 166, 166);
+    
+}
+#cart-title-div{
+    border-bottom: 1px solid grey;
+    width: 550px;
+    height: 50px;
+    display: flex;
+}
+#cart-title-div{
+    flex-direction: row;
+}
