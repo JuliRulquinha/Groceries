@@ -248,7 +248,6 @@ footer{
     background-color: white;
     box-shadow: 0px 1px 5px 2px rgb(129, 129, 129);
     font-size: 20px;
-    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
     color: rgb(105, 105, 105);
@@ -258,10 +257,12 @@ footer{
 .text-holder{
     padding-bottom: 10px;
     margin-left: 145px;
+    text-align: center;
 }
 .text-holder-order{
     padding-bottom: 10px;
     border-bottom: 1px solid grey;
+    text-align: center;
 }
 
 #order-sum{
@@ -289,4 +290,49 @@ footer{
 }
 #cart-title-div{
     flex-direction: row;
+}
+
+.cart-product-div{
+    width: 89%;
+    height: 100px;
+    box-shadow: 0 0 3px 1px rgb(194, 194, 194);
+    margin-left: 35px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.cart-item-div{
+    width: 80%;
+    height: 90px;
+    display: flex;
+    
+}
+
+.cart-product-img{
+    width: 80px;
+    height: 80px;
+    margin: 8px 25px 10px 20px;
+}
+
+.cart-product-name{
+    margin: 15px 20px 30px 15px;
+}
+
+.cart-product-price{
+    margin: 40px 5px 0 30px;
+    
+}
+
+.cart-product-trash-bin{
+    width: 15px;
+    height: 15px;
+    margin: 8px 5px 5px 75px;
+}    
+
+.cart-product-price-trash-bin-div{
+    height: 100%;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
 }

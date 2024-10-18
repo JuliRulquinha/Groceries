@@ -220,36 +220,63 @@ function closeCartTab(){
     }
 }
 
-function createShoppingCartCard(product){
+// function createShoppingCartCard(product){
 
-    const cartDiv = document.getElementById("cart-div");
-    const productDiv = document.createElement("div");
-    const productItem = document.createElement("div");
-    const productData = document.createElement("div");
-    const productName = document.createElement("span");
-    const productPrice = document.createElement("span");
-    const productImg = document.createElement("img");
+//     const cartDiv = document.getElementById("cart-div");
+//     const productDiv = document.createElement("div");
+//     const productItem = document.createElement("div");
+//     const productData = document.createElement("div");
+//     const productName = document.createElement("span");
+//     const productPrice = document.createElement("span");
+//     const productImg = document.createElement("img");
 
-    cartDiv.appendChild(productDiv);
-    productDiv.appendChild(productItem);
-    productItem.appendChild(productImg);
-    productItem.appendChild(productData);
-    productItem.appendChild(productName);
-    productItem.appendChild(productPrice);
+//     cartDiv.appendChild(productDiv);
+//     productDiv.appendChild(productItem);
+//     productItem.appendChild(productImg);
+//     productItem.appendChild(productData);
+//     productItem.appendChild(productName);
+//     productItem.appendChild(productPrice);
 
 
-    cartDiv.className = "cart-product-card-div";
-    productDiv.className = "cart-product-div";
-    productItem.className = "cart-item-div";
-    productData.className = "cart-item-data";
-    productName.className = "cart-product-name";
-    productPrice.className = "cart-product-price";
-    productImg.className = "cart-product-img";
+//     cartDiv.className = "cart-product-card-div";
+//     productDiv.className = "cart-product-div";
+//     productItem.className = "cart-item-div";
+//     productData.className = "cart-item-data";
+//     productName.className = "cart-product-name";
+//     productPrice.className = "cart-product-price";
+//     productImg.className = "cart-product-img";
 
-    productImg.src = product.imgUrl;
-    productImg.setAttribute("width","100%");
-    productImg.setAttribute("height","100%");
+//     productImg.src = product.imgUrl;
+//     productImg.setAttribute("width","100%");
+//     productImg.setAttribute("height","100%");
     
 
 
+// }
+
+function getProductInfo(){
+
+    fetch(`https://localhost:7226/Products/${idParam}`,{
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        }
+        
+    }).then(response => response.json())
+    .then(product => {
+        debugger;
+        let imgEL = document.getElementById("cart-product-img");
+        imgEL.src = product.imgUrl;
+        console.log(imgEL);
+        
+        let nameEL = document.getElementById("cart-product-name");
+        nameEL.innerText = product.name;
+        
+
+
+        let priceEL = document.getElementById("cart-product-price");
+        priceEL.innerText = "R$: "+product.price;
+
+        mainProduct = product;
+    })
 }

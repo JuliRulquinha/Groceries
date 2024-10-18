@@ -6,27 +6,34 @@ function createShoppingCartCard(product){
     
     debugger;
     const cartDiv = document.getElementById("cart-div");
-    const productDiv = document.createElement("div");
-    const productItem = document.createElement("div");
-    const productName = document.createElement("span");
-    const productPrice = document.createElement("span");
-    const productImg = document.createElement("img");
+    const productDivEl = document.createElement("div");
+    const productItemEl = document.createElement("div");
+    const productPriceAndBinDivEl = document.createElement("div");
+    const productNameEl = document.createElement("span");
+    const productPriceEl = document.createElement("span");
+    const productImgEl = document.createElement("img");
+    const trashBinEl = document.createElement("img");
 
-    
-    productDiv.appendChild(productItem);
-    productItem.appendChild(productImg);
-    productItem.appendChild(productName);
-    productItem.appendChild(productPrice);
-    cartDiv.appendChild(productDiv);
+    productImgEl.src = product.imgUrl;
+    productNameEl.innerText = product.name;
+    productPriceEl.innerText = "R$: "+product.price; 
+    trashBinEl.src = `https://cdn-icons-png.flaticon.com/512/54/54324.png`;
 
+    productItemEl.appendChild(productImgEl);
+    productItemEl.appendChild(productNameEl);
+    productPriceAndBinDivEl.appendChild(trashBinEl);  
+    productPriceAndBinDivEl.appendChild(productPriceEl);  
+    productDivEl.appendChild(productItemEl);
+    productDivEl.appendChild(productPriceAndBinDivEl);
+    cartDiv.appendChild(productDivEl);
 
-    productDiv.className = "cart-product-div";
-    productItem.className = "cart-item-div";
-    productName.className = "cart-product-name";
-    productPrice.className = "cart-product-price";
-    productImg.className = "cart-product-img";
-
-    
+    productDivEl.className = "cart-product-div";
+    productItemEl.className = "cart-item-div";
+    productNameEl.className = "cart-product-name";
+    productPriceEl.className = "cart-product-price";
+    productImgEl.className = "cart-product-img";
+    trashBinEl.className = "cart-product-trash-bin";
+    productPriceAndBinDivEl.className = "cart-product-price-trash-bin-div";
 
 }
 
