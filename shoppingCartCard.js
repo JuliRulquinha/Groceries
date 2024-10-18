@@ -35,6 +35,7 @@ function createShoppingCartCard(product){
     trashBinEl.className = "cart-product-trash-bin";
     productPriceAndBinDivEl.className = "cart-product-price-trash-bin-div";
 
+    trashBinEl.onclick = function(){};
 }
 
 function showCartContent(){
